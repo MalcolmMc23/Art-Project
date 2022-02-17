@@ -2,7 +2,7 @@
 // 2/17/22
 //FlowField
 
-var inc = 0.01;
+var inc = 0.1;
 var start = 0;
 var cellSize = 50
 var cols, rows;
@@ -15,7 +15,7 @@ var stars = [];
 
 
 function setup() {
-  var cnv = createCanvas(700, 700);
+  var cnv = createCanvas(700, 504);
   cnv.position((windowWidth-width)/2, 30);
   // background(20)
 
@@ -25,11 +25,11 @@ function setup() {
 
   flowField = new Array(cols * rows)
 
-  for(var i = 0; i < 125; i++) {
+  for(var i = 0; i < 50; i++) {
   particals[i] = new Partical();
   }
 
-  for(var i = 0; i < 200; i++) {
+  for(var i = 0; i < 100; i++) {
     stars[i] = new Stars();
   }
 
@@ -43,7 +43,9 @@ function draw() {
   
   background(20, 20, 20, 50);
   }
-  stars.render();
+  for(var i = 0; i < stars.length; i++) {
+    stars[i].render();
+  }
 
   var yoff = 0;
   for(var x = 0; x < rows; x++) {

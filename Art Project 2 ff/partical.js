@@ -3,7 +3,7 @@ class Partical {
             this.loc = createVector(random(width), random(height));
             this.vel = createVector(0, 0)
             this.acc = createVector(0, 0)
-            this.diam = 5
+            this.diam = 10
             this.lim = 0.5;
             this.num = floor(random(1, 3));
             this.clr = color(0, 0, 255);
