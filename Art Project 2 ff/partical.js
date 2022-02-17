@@ -5,12 +5,14 @@ class Partical {
             this.acc = createVector(0, 0)
             this.diam = 5
             this.lim = 0.5;
-            this.num = floor(random(1, 2));
+            this.num = floor(random(1, 3));
+            this.clr = color(0, 0, 255);
+            // console.log(this.num)
         }
     
         run() {
             this.render();
-            this.checkEdges()
+            this.checkEdges();
         }
     
         render() {
@@ -49,6 +51,13 @@ class Partical {
         
 
         applyForce(force) {
-            this.acc.add(force)
+            this.acc.add(force);
+
+            if(keyTyped()) {
+                this.vel = createVector(0, 0);
+                this.acc = createVector(0, 0);
+            }
         }
+
+        
 }

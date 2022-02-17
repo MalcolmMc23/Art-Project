@@ -1,8 +1,8 @@
 // Malcolm McDonald
-// 1/25/22
+// 2/17/22
 //FlowField
 
-var inc = 0.1;
+var inc = 0.01;
 var start = 0;
 var cellSize = 50
 var cols, rows;
@@ -10,6 +10,8 @@ var zoff = 0;
 var fr;
 var particals = [];
 var flowField;
+
+var stars = [];
 
 
 function setup() {
@@ -23,16 +25,25 @@ function setup() {
 
   flowField = new Array(cols * rows)
 
-  for(var i = 0; i < 200; i++) {
+  for(var i = 0; i < 125; i++) {
   particals[i] = new Partical();
   }
 
-
+  for(var i = 0; i < 200; i++) {
+    stars[i] = new Stars();
+  }
 
 }
 
 function draw() {
+  if(keyTyped()){
+
+  } else {
+
+  
   background(20, 20, 20, 50);
+  }
+  stars.render();
 
   var yoff = 0;
   for(var x = 0; x < rows; x++) {
@@ -65,6 +76,14 @@ function draw() {
     }
 
     fr.html(floor(frameRate()));
+  }
+}
+
+function keyTyped() {
+  if (key === 'a') {
+    return true
+   } else if (key === 'b') {
+     return false
   }
 }
 
