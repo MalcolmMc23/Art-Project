@@ -28,7 +28,7 @@ class Moon {
     }
     split() {
         var clr = color(0,0,255)
-        if(mouseIsPressed === true) {
+        if(mouseIsPressed === true) { // makes a root if the mouse is pressed
             roots.push(new Root(this.loc.x, this.loc.y, 5, 133,clr));
         }
     }

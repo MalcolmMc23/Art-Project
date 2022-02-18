@@ -7,7 +7,6 @@ class Planet {
         this.orbit = random(50, 400);//dist from sun
         this.moons = [];
 
-        this.anchor = createVector(500,500)
 
         for(var i = 0; i < 3; i++) {
             this. moons[i] = new Moon(this, this.parent); 
@@ -20,8 +19,6 @@ class Planet {
         this.render();
         this.update();
         this.split();//renders roots
-        this.vel = createVector(random(-30,30), random(-30,30))
-        this.anchor.add(this.vel)
     }
 
     render() {
@@ -39,7 +36,7 @@ class Planet {
         this.loc.y = this.loc.y + sin(this.angle) * this.orbit;
     }
 
-    split() {
+    split() { // runs the roots if a key is pressed
         var clr = color(255,0,0)
         if(keyIsPressed === true) {
             roots.push(new Root(this.loc.x, this.loc.y, 5, 133, clr));
