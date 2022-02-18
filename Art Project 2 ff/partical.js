@@ -7,7 +7,6 @@ class Partical {
             this.lim = 0.5;
             this.num = floor(random(1, 3));
             this.clr = color(0, 0, 255);
-            // console.log(this.num)
         }
     
         run() {

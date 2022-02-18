@@ -1,10 +1,11 @@
 class Root {
-    constructor(x, y, r, l) {
+    constructor(x, y, r, l, c) {
       this.loc = createVector(x, y);
       this.vel = createVector(random(-3, 3), random(-3, 3));
       this.r = r;
       this.lifespan = l;
       this.isDead = false;
+      this.clr = c
     }
 
     run() {
@@ -13,7 +14,7 @@ class Root {
     }
 
     render() {
-        fill(255, 255, 255)
+        fill(this.clr)
         noStroke()
         // fill(20, 20, 20, 10)
         ellipse(this.loc.x, this.loc.y, this.r);

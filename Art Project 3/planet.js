@@ -19,7 +19,7 @@ class Planet {
     run() {
         this.render();
         this.update();
-        // this.split();//renders roots
+        this.split();//renders roots
         this.vel = createVector(random(-30,30), random(-30,30))
         this.anchor.add(this.vel)
     }
@@ -40,8 +40,9 @@ class Planet {
     }
 
     split() {
-        if(mouseIsPressed === true) {
-            roots.push(new Root(this.loc.x, this.loc.y, 5, 133));
+        var clr = color(255,0,0)
+        if(keyIsPressed === true) {
+            roots.push(new Root(this.loc.x, this.loc.y, 5, 133, clr));
         }
     }
 

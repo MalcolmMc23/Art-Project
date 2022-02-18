@@ -10,8 +10,8 @@ var zoff = 0;
 var fr;
 var particals = [];
 var flowField;
-
 var stars = [];
+var slider
 
 
 function setup() {
@@ -19,9 +19,12 @@ function setup() {
   cnv.position((windowWidth-width)/2, 30);
   // background(20)
 
+  slider = createSlider(0.001, 1.0, 0.5, 0); //yoff slider
+  slider.position(30, 10);
+
   fr = createP('')
   cols = floor(width/cellSize);
-  rows = floor(height/cellSize);
+  rows = floor(height/cellSize + 4);
 
   flowField = new Array(cols * rows)
 
@@ -47,6 +50,8 @@ function draw() {
     stars[i].render();
   }
 
+  var val = slider.value();
+
   var yoff = 0;
   for(var x = 0; x < rows; x++) {
     var xoff = 0;
@@ -65,11 +70,16 @@ function draw() {
 
       pop();
       // fill(r);
+      // fill(255)
       // rect(x * cellSize, y * cellSize, cellSize);
     }
-    yoff += inc;
+    // yoff += inc;
+    yoff += val;//changes the yoff
+
 
     zoff += 0.001;
+    // zoff += val;
+
 
   for(var i = 0; i < particals.length; i++) {
     particals[i].follow(flowField);

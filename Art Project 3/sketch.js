@@ -13,11 +13,12 @@ function setup() {
   var pX = width/2;// planet loc x
   var pY = height/2;// planet loc y 
   sun = new Sun(width/2, height/2); //makes a sun
+  background(20)
 }
 
 function draw(){
   // background(255, 255, 255, 1)
-  background(20, 20, 20, 50)
+  // background(20, 20, 20, 20)
   sun.run();//runs sun
 
 //################### roots
@@ -34,6 +35,8 @@ function checkRoots() {
     }
   }
 }
+
+
 
 
 function runRoots() {
