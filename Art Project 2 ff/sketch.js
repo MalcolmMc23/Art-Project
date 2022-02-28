@@ -77,7 +77,7 @@ function draw() {
     yoff += val;//changes the yoff
 
 
-    zoff += 0.001;
+    zoff += 0.01;
     // zoff += val;
 
 
