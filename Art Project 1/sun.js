@@ -1,14 +1,11 @@
 class Sun {
-	constructor(x, y, clr, clr2, clr3) {
+	constructor(x, y) {
 		this.loc = createVector(x, y);
 		this.size = 30 //sun size
 		this.planets = [];
-		this.clr = clr
-		this.clr2 = clr2;
-		this.clr3 = clr3;
 		
-		for (var i = 0; i < 2; i++) {
-			this.planets[i] = new Planet(this, this.clr, this.clr2, this.clr3)
+		for (var i = 0; i < 4; i++) {
+			this.planets[i] = new Planet(this,)
 		}
 
 	}

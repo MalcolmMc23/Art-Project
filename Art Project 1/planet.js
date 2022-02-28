@@ -1,5 +1,5 @@
 class Planet {
-    constructor(parent, clr, clr2, clr3) {
+    constructor(parent) {
         this.parent = parent
         this.loc = createVector(0,0);
         this.acc = createVector(random(-2, 2), random(-2, 2));
@@ -9,13 +9,11 @@ class Planet {
         this.angle = random(TWO_PI);//angle of rotation
         this.orbit = random(50, 400);//dist from sun
         this.moons = [];
-        this.clr = clr
-        this.clr2 = clr2;
-		this.clr3 = clr3;
+    
 
         this.anchor = createVector(500,500)
 
-        for(var i = 0; i < 3; i++) {
+        for(var i = 0; i < 1; i++) {
             this. moons[i] = new Moon(this, this.parent, this.clr); 
          }
         
@@ -31,7 +29,7 @@ class Planet {
     }
 
     render() {
- 
+       
         // fill(0, 150, 0);
         // ellipse(this.loc.x, this.loc.y, this.size);// make planet
 
@@ -44,11 +42,11 @@ class Planet {
 
     update() {
         this.loc = createVector(sun.loc.x, sun.loc.y);// get the loc of the sun
-        this.angle += 0.01 // speed of rotation
+        this.angle += 0.005 // speed of rotation
         this.loc.x = this.loc.x + cos(this.angle) * this.orbit; //makes it rotate
         this.loc.y = this.loc.y + sin(this.angle) * this.orbit;
-        stroke(this.clr, this.clr2, this.clr3);
-        noFill();
-        line(this.loc.x, this.loc.y, this.parent.loc.x, this.parent.loc.y)
+        // stroke(this.clr, this.clr2, this.clr3);
+        // noFill();
+        // line(this.loc.x, this.loc.y, this.parent.loc.x, this.parent.loc.y)
     }
 }
