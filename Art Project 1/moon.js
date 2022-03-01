@@ -20,6 +20,8 @@ class Moon {
         // fill(200);
         // ellipse(this.loc.x, this.loc.y, this.size); //makes moon
         if(keyPressed() === true){
+
+        // stroke(200,255,0, 30)
         stroke(0,255,200, 30)
         noFill()
         bezier(this.parent.loc.x, this.parent.loc.y, this.loc.x, this.loc.y, this.loc.x, this.loc.y, this.sunParent.loc.x, this.sunParent.loc.y)

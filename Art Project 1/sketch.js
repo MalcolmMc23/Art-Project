@@ -13,7 +13,7 @@ function setup() {
   var pY = height/2;// planet loc y 
 
 
-  slider = createSlider(0, 255, 100);
+  slider = createSlider(0, 10, 5);
   slider.position(10, 10);
 
 
@@ -27,7 +27,6 @@ function draw(){
   // background(20)
   // background(20,20,20)
   sun.run();//runs sun
-  var val = slider.value();
 
 }
 
