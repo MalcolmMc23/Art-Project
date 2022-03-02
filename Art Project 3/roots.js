@@ -21,7 +21,7 @@ class Root {
     }
 
     update() {
-        this.r = this.r - 0.3;
+        this.r = this.r - 0.1;
          if(this.r < 0) this.isDead = true;
     //this.r -= .08;
     this.acc = createVector(random(-0.3, 0.3), random(-0.3, 0.3));

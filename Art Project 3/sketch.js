@@ -21,7 +21,6 @@ function setup() {
 }
 
 function draw(){
-  let val = slider.value();
   // background(255, 255, 255, 1)
   // background(20, 20, 20, 20)
   sun.run();//runs sun

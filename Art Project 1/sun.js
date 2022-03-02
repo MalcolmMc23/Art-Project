@@ -5,7 +5,7 @@ class Sun {
 		this.planets = [];
 		
 		for (var i = 0; i < 4; i++) {
-			this.planets[i] = new Planet(this,)
+			this.planets[i] = new Planet(this) //makes new planets 
 		}
 
 	}
@@ -18,7 +18,7 @@ class Sun {
 		// fill(255, 255, 0);
 		// ellipse(this.loc.x, this.loc.y, this.size) //makes sun
 		for (var i = 0; i < this.planets.length; i++) {
-			this.planets[i].run()
+			this.planets[i].run()// runs planets
 		}
 	}
 }

@@ -8,12 +8,8 @@ var slider;
 function setup() {
   var cnv = createCanvas(800, 494.4);
   cnv.position((windowWidth-width)/2, 30);
-  background(20, 20, 20)
-  var pX = width/2;// planet loc x
-  var pY = height/2;// planet loc y 
-
-
-  slider = createSlider(0, 10, 5);
+  background(20, 20, 20);
+  slider = createSlider(0, 300, 150);
   slider.position(10, 10);
 
 
@@ -27,13 +23,12 @@ function draw(){
   // background(20)
   // background(20,20,20)
   sun.run();//runs sun
-
 }
 
-function keyPressed() {
-   if(key === 'a') {
+function keyPressed() { // start and stop
+   if(key === 'a') { // start
      return true
-   } else if (key === 'b') {
+   } else if (key === 'b') {// stop
      return false
    }
 }
