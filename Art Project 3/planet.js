@@ -37,9 +37,8 @@ class Planet {
     }
 
     split() { // runs the roots if a key is pressed
-        var clr = color(255,0,0)
         if(keyIsPressed === true) {
-            roots.push(new Root(this.loc.x, this.loc.y, 5, 133, clr));
+            roots.push(new Root(this.loc.x, this.loc.y, 5, 533));
         }
     }
 

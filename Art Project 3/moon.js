@@ -27,9 +27,8 @@ class Moon {
         this.loc.y = this.parent.loc.y + sin(this.angle) * this.orbit;
     }
     split() {
-        var clr = color(0,0,255)
         if(mouseIsPressed === true) { // makes a root if the mouse is pressed
-            roots.push(new Root(this.loc.x, this.loc.y, 5, 133,clr));
+            roots.push(new Root(this.loc.x, this.loc.y, 5, 133));
         }
     }
 }

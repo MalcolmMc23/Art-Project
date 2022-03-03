@@ -7,10 +7,15 @@ var roots = [];
 var count = 0; // counter for the roots 
 var slider
 var val
+var img;
 
+
+function preload() {
+  img = loadImage("AP3 image.jfif")
+}
 
 function setup() {
-  var cnv = createCanvas(900, 648);
+  var cnv = createCanvas(1707 ,1067);
   cnv.position((windowWidth-width)/2, 30);
   var pX = width/2;// planet loc x
   var pY = height/2;// planet loc y 
@@ -18,6 +23,10 @@ function setup() {
   background(20)
   slider = createSlider(0, 255, 100);
   slider.position(10, 10);
+
+  // image(img, 0, 0, 828 ,512);
+
+
 }
 
 function draw(){

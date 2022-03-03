@@ -1,11 +1,11 @@
 class Root {
-    constructor(x, y, r, l, c) {
+    constructor(x, y, r, l) {
       this.loc = createVector(x, y);
       this.vel = createVector(random(-3, 3), random(-3, 3));
       this.r = r;
       this.lifespan = l;
       this.isDead = false;
-      this.clr = c
+      // this.clr = c
     }
 
     run() {
@@ -14,6 +14,8 @@ class Root {
     }
 
     render() {
+      this.clr = img.get(this.loc.x*3, this.loc.y*3);
+
         fill(this.clr)
         noStroke()
         // fill(20, 20, 20, 10)
@@ -21,7 +23,7 @@ class Root {
     }
 
     update() {
-        this.r = this.r - 0.1;
+        this.r = this.r - 0.01;
          if(this.r < 0) this.isDead = true;
     //this.r -= .08;
     this.acc = createVector(random(-0.3, 0.3), random(-0.3, 0.3));
