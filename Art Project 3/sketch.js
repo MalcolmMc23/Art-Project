@@ -20,8 +20,8 @@ function setup() {
   var pX = width/2;// planet loc x
   var pY = height/2;// planet loc y 
   sun = new Sun(width/2, height/2); //makes a sun
-  background(20)
-  slider = createSlider(0, 255, 100);
+  background(255)
+  slider = createSlider(0.005, 0.1, 0.05, 0);
   slider.position(10, 10);
 
   // image(img, 0, 0, 828 ,512);

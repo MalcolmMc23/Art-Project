@@ -5,6 +5,7 @@ class Root {
       this.r = r;
       this.lifespan = l;
       this.isDead = false;
+      this.val = slider.value();
       // this.clr = c
     }
 
@@ -14,6 +15,7 @@ class Root {
     }
 
     render() {
+
       this.clr = img.get(this.loc.x*3, this.loc.y*3);
 
         fill(this.clr)
@@ -23,7 +25,8 @@ class Root {
     }
 
     update() {
-        this.r = this.r - 0.01;
+      this.val = slider.value();
+        this.r = this.r - this.val;
          if(this.r < 0) this.isDead = true;
     //this.r -= .08;
     this.acc = createVector(random(-0.3, 0.3), random(-0.3, 0.3));
