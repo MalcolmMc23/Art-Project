@@ -6,6 +6,7 @@ class Root {
       this.lifespan = l;
       this.isDead = false;
       this.val = slider.value();
+      this.acc = createVector(random(-20, 20), random(-20, 20)) 
       // this.clr = c
     }
 
@@ -37,6 +38,8 @@ class Root {
     count++
     if (count === 100) {
       roots.push(new Root(this.loc.x, this.loc.y, this.r, this.clr, 30));
+
+      // this.vel.add(this.acc)
     }
     }
 
