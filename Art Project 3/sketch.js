@@ -5,8 +5,8 @@
 var sun;
 var roots = [];
 var count = 0; // counter for the roots 
-var slider
-var val
+var slider1;
+var slider2;
 var img;
 
 
@@ -23,6 +23,9 @@ function setup() {
   background(255)
   slider = createSlider(0.005, 0.1, 0.05, 0);
   slider.position(10, 10);
+
+  slider2 = createSlider(10, 250, 50, 0);
+  slider2.position(150, 10);
 
   // image(img, 0, 0, 828 ,512);
 

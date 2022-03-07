@@ -15,7 +15,7 @@ class Sun {
 	}
 
 	render() {
-		fill(255, 255, 0);
+		fill(20, 20, 20);
 		ellipse(this.loc.x, this.loc.y, this.size) //makes sun
 		for (var i = 0; i < this.planets.length; i++) {
 			this.planets[i].run() // runs planet 
